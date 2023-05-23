@@ -10,9 +10,9 @@ class Board {
   public static final int SIZE = 3;
   public static final int WIN_STREAK = 3;
 
-  private static Mark[][] board = new Mark[SIZE][SIZE];
+  private Mark[][] board = new Mark[SIZE][SIZE];
   private GameStatus gameStatus = GameStatus.IN_PROGRESS;
-  private static int blankCounter = SIZE * SIZE;
+  private int blankCounter = SIZE * SIZE;
 
   public Board() {
     for (int i = 0; i < board.length; i++) {
