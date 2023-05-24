@@ -1,6 +1,11 @@
+package ttt.player;
+
 import java.util.Random;
 
-public class WhateverPlayer implements Player {
+import ttt.main.Board;
+import ttt.main.Mark;
+
+class WhateverPlayer implements Player {
   private Random random = new Random();
 
   @Override

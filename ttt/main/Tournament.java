@@ -1,6 +1,13 @@
+package ttt.main;
+
 import java.util.Scanner;
 
-public class Tournament {
+import ttt.player.Player;
+import ttt.player.PlayerFactory;
+import ttt.renderer.Renderer;
+import ttt.renderer.RendererFactory;
+
+class Tournament {
   private static final int ARGS_NUM = 3;
   private static final int ARG_PLAYER1_TYPE = 0;
   private static final int ARG_PLAYER2_TYPE = 1;
@@ -41,14 +48,14 @@ public class Tournament {
     System.out.printf("Player 1: %d Player 2: %d Draws: %d", results[0], results[1], results[2]);
   }
 
-  public Tournament(int rounds, Player player1, Player player2, Renderer renderer) {
+  Tournament(int rounds, Player player1, Player player2, Renderer renderer) {
     this.rounds = rounds;
     this.players[0] = player1;
     this.players[1] = player2;
     this.renderer = renderer;
   }
 
-  public int[] playTournament() {
+  int[] playTournament() {
     int[] results = new int[3];
     for (int i = 0; i < rounds; i++) {
       Game game = new Game(players[i % players.length], players[(i + 1) % players.length], renderer);

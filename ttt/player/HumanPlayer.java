@@ -1,6 +1,11 @@
+package ttt.player;
+
 import java.util.Scanner;
 
-public class HumanPlayer implements Player {
+import ttt.main.Board;
+import ttt.main.Mark;
+
+class HumanPlayer implements Player {
   Scanner scanner = new Scanner(System.in);
 
   @Override

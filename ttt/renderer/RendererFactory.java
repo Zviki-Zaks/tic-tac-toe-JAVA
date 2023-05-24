@@ -1,3 +1,5 @@
+package ttt.renderer;
+
 public class RendererFactory {
   public static Renderer buildRenderer(String arg) {
     Renderer renderer = null;

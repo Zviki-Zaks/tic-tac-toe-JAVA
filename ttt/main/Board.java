@@ -1,12 +1,10 @@
-enum Mark {
-  BLANK, X, O
-}
+package ttt.main;
 
 enum GameStatus {
   DRAW, X_WIN, O_WIN, IN_PROGRESS
 }
 
-class Board {
+public class Board {
   public static final int SIZE = 3;
   public static final int WIN_STREAK = 3;
 
@@ -14,7 +12,7 @@ class Board {
   private GameStatus gameStatus = GameStatus.IN_PROGRESS;
   private int blankCounter = SIZE * SIZE;
 
-  public Board() {
+  Board() {
     for (int i = 0; i < board.length; i++) {
       for (int j = 0; j < board[i].length; j++) {
         board[i][j] = Mark.BLANK;
@@ -33,7 +31,7 @@ class Board {
     }
   }
 
-  public GameStatus getGameStatus() {
+  GameStatus getGameStatus() {
     return gameStatus;
   }
 

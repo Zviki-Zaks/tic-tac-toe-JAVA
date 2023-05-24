@@ -1,3 +1,5 @@
+package ttt.player;
+
 public class PlayerFactory {
   public static Player buildPlayer(String arg) {
     Player player = null;
